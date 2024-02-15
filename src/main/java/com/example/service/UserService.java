@@ -1,16 +1,18 @@
 package com.example.service;
 
 import com.example.domain.User;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+@Getter
+@AllArgsConstructor
 
 @Service
 public class UserService {
 
-    @Autowired
-    private NotificationService notificationService;
 
+    private NotificationService notificationService;
 
 
     public User createUser(String name, int age, String email) {
